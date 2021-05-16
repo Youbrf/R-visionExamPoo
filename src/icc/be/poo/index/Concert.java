@@ -1,16 +1,17 @@
 package icc.be.poo.index;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.TreeSet;
 
-public class  Concert extends Evenement implements Manageable{
+import icc.be.poo.exception.DuplicateArtistException;
+
+public class Concert extends Evenement implements Serializable {
 	private String designation;
 	private ArrayList<Artiste> artistes;
 	
 
-	public Concert(String designation) {
-		super();
-		this.designation = designation;
-		this.artistes = new ArrayList<>();
+	public Concert() {
 	}
 
 	public String getDesignation() {
@@ -29,19 +30,20 @@ public class  Concert extends Evenement implements Manageable{
 		this.artistes = artistes;
 	}
 
-	public void getVIPs() {
-		
+	public ArrayList<Artiste> getVIPs() {
+		ArrayList<Artiste> result = new ArrayList<>();
+		for (Artiste artiste : artistes) {
+			if(artiste.isVip()) {
+				result.add(artiste);
+			}
+		}
+		return result;
 	}
 
 	@Override
-	public boolean dropArtist(Artiste a) {
-		// TODO Auto-generated method stub
-		return false;
+	public String toString() {
+		return "Concert [\ndesignation=" + designation 
+				+ ", \nartistes=\n" + artistes + "]";
 	}
-
-	@Override
-	public boolean hadArtist(Artiste a) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 }

@@ -1,0 +1,11 @@
+<Concert>
+  <designation>Rap</designation>
+  <Artiste dateCreation="2021-05-16">
+    <nomArtiste>rimk</nomArtiste>
+    <isVip>false</isVip>
+  </Artiste>
+  <Artiste dateCreation="2021-05-19">
+    <nomArtiste>ninho</nomArtiste>
+    <isVip>false</isVip>
+  </Artiste>
+</Concert>

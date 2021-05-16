@@ -12,5 +12,4 @@ public class DuplicateArtistException extends RuntimeException {
 		super(message);
 	}
 	
-	
 }

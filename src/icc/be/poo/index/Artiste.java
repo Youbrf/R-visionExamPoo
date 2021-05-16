@@ -20,6 +20,24 @@ public class Artiste {
 		this.isVip = IsVip;
 	}
 
+	public String getNomArtiste() {
+		return nomArtiste;
+	}
+	public void setNomArtiste(String nomArtiste) {
+		this.nomArtiste = nomArtiste;
+	}
+	public LocalDate getDateCreation() {
+		return dateCreation;
+	}
+	public void setDateCreation(LocalDate dateCreation) {
+		this.dateCreation = dateCreation;
+	}
+	public boolean isVip() {
+		return isVip;
+	}
+	public void setVip(boolean isVip) {
+		this.isVip = isVip;
+	}
 	@Override
 	public String toString() {
 		return "Artiste \n[Artiste=" + nomArtiste 
